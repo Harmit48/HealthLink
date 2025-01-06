@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo" onclick="window.location.href = '../index.html';">HealthLink</div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul class="nav-links">
+        <li><a href="../index.html">Back To Home</a></li>
+      </ul>
+    </nav>
+
+    <div class="form-container">
+      <form id="registrationForm">
+        <h2>CREATE YOUR ACCOUNT</h2>
+        <input type="text" id="fullName" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+
+        <!-- Password Input with Toggle Icon -->
+        <div class="password-container">
+          <input type="password" id="password" placeholder="Password" required>
+          <img id="togglePassword" class="toggle-icon" src="../image/hide.png" alt="Toggle Password">
+        </div>
+
+        <div class="password-container">
+          <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+          <img id="toggleConfirmPassword" class="toggle-icon" src="../image/hide.png" alt="Toggle Confirm Password">
+        </div>
+
+        <select id="userType" required>
+          <option value="User">Patient</option>
+          <option value="Admin">Admin</option>
+          <option value="Doctor">Doctor</option>
+        </select>
+        <button type="submit">Register</button>
+
+        <!-- Back to Login Link -->
+        <div class="back-to-login">
+          <a href="../html/login.html">Back to Login</a>
+        </div>
+      </form>
+    </div>
+
+    <footer>
+      <p>© 2025 HealthLink | All Rights Reserved</p>
+    </footer>
+  </div>
+
+  <script src="../js/register.js"></script>
+</body>
+</html>

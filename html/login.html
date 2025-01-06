@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - HealthLink</title>
+    <link rel="stylesheet" href="../css/loging.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo" onclick="window.location.href = '../index.html';">HealthLink</div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links">
+          <li><a href="../index.html">Back To Home</a></li>
+        </ul>
+      </nav>
+
+    <!-- Login Form Section -->
+    <section class="login-section">
+        <div class="login-container">
+            <h2>Login to Your Account</h2>
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <input type="text" id="loginId" placeholder="Enter ID" required><br>
+                <div class="password-container">
+                    <input type="password" id="loginPassword" placeholder="Enter Password" required>
+                    <img id="togglePassword" class="toggle-password" src="../image/hide.png" alt="Show/Hide Password">
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p class="signup-link">Don't have an account? <a href="register.html">Sign Up</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 HealthLink | All Rights Reserved</p>
+    </footer>
+
+    <script src="../js/login.js"></script>
+</body>
+</html>

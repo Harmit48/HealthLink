@@ -1,0 +1,199 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #141414, #e65100);
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Navbar Styles */
+  /* Navbar */
+  .navbar {
+    background-color: #0b1616;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  
+  .navbar .logo {
+    color: #ff5f00;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+    margin-right: 4rem;
+  }
+  
+  .navbar .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .navbar .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .navbar .nav-links li a.active,
+  .navbar .nav-links li a:hover {
+    color: #ff5f00;
+  }
+  
+  /* Menu Toggle Button */
+  .menu-toggle {
+    display: none; /* Hidden by default */
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: #ff5f00;
+    cursor: pointer;
+  }
+  
+  /* Show Menu Toggle Button on Smaller Screens */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block; /* Display the menu toggle button */
+    }
+  
+    .nav-links {
+      display: none; /* Hide the navigation links */
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #0b1616;
+      width: 200px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      padding: 10px 0;
+    }
+  
+    .nav-links.active {
+      display: flex; /* Show the navigation links when the menu is toggled */
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+  
+    .nav-links li a {
+      padding: 10px 20px;
+      display: block;
+    }
+  }
+
+/* Login Section */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #0b1616, #FF5F00);
+    padding-top: 80px;
+}
+
+.login-container {
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #FF5F00;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container input {
+    padding-right: 40px; /* Add space for the eye icon */
+}
+
+.password-container .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #FF5F00;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+    background-color: #0b1616;
+}
+
+.login-container .signup-link {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.login-container .signup-link a {
+    color: #FF5F00;
+    text-decoration: none;
+}
+
+.login-container .signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0b1616;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    color: #fff;
+}

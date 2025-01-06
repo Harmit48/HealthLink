@@ -1,0 +1,199 @@
+body {
+  height: 81vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #141414, #e65100);
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+  padding: 0rem;
+}
+
+ /* Navbar */
+ .navbar {
+  background-color: #0b1616;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar .logo {
+  color: #ff5f00;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  margin-right: 4rem;
+}
+
+.navbar .nav-links li {
+  margin: 0 15px;
+}
+
+.navbar .nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links li a.active,
+.navbar .nav-links li a:hover {
+  color: #ff5f00;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #ff5f00;
+  cursor: pointer;
+}
+
+/* Show Menu Toggle Button on Smaller Screens */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Display the menu toggle button */
+  }
+
+  .nav-links {
+    display: none; /* Hide the navigation links */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #0b1616;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show the navigation links when the menu is toggled */
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .nav-links li a {
+    padding: 10px 20px;
+    display: block;
+  }
+}
+
+/* Form */
+.form-container {
+  margin-top: 10rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #000;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+form h2 {
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+form input,
+form select,
+form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  margin-left: -0.8rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+}
+
+form input,
+form select {
+  background-color: #333;
+  color: #fff;
+}
+
+form input::placeholder {
+  color: #aaa;
+}
+
+form button {
+  background-color: #e65100;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  width: 90%;
+  margin: 2rem 3rem 0 1rem;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #bf4900;
+}
+
+#userType {
+  width: 106%;
+}
+
+/* Back to Login Styles */
+.back-to-login {
+  margin-top: 1rem;
+}
+
+.back-to-login a {
+  color: #ff5f00;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.back-to-login a:hover {
+  color: #ffa040;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0b1616;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  color: #fff;
+}
+
+/* Password Toggle Icon */
+.password-container {
+  position: relative;
+}
+
+.toggle-icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}

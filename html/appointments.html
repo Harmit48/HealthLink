@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthLink | Book Appointment</title>
+    <link rel="stylesheet" href="../css/appointments.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">HealthLink</div>
+        <button class="menu-toggle">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="appointments.html">Appointments</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Appointment Form Section -->
+    <section class="appointment-form">
+        <h2>Book an Appointment</h2>
+        <form id="appointmentForm">
+            <input type="text" id="userName" placeholder="Enter your name" required><br>
+            <input type="email" id="userEmail" placeholder="Enter your email" required><br>
+            <input type="date" id="appointmentDate" required><br>
+            <select id="serviceType" required>
+                <option value="">Select Service</option>
+                <option value="Consultation">Consultation</option>
+                <option value="Health Monitoring">Health Monitoring</option>
+                <option value="General Checkup">General Checkup</option>
+                <option value="Specialist Appointment">Specialist Appointment</option>
+                <option value="Diagnostics">Diagnostics</option>
+            </select><br>
+            <textarea id="userMessage" placeholder="Enter any additional details" rows="4"></textarea><br>
+            <button type="submit">Book Appointment</button>
+        </form>
+        <div id="confirmationMessage" style="display: none;"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 HealthLink | All Rights Reserved</p>
+    </footer>
+
+    <script src="../js/appointments.js"></script>
+</body>
+</html>
