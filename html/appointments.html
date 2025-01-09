@@ -23,11 +23,11 @@
     <!-- Appointment Form Section -->
     <section class="appointment-form">
         <h2>Book an Appointment</h2>
-        <form id="appointmentForm">
-            <input type="text" id="userName" placeholder="Enter your name" required><br>
-            <input type="email" id="userEmail" placeholder="Enter your email" required><br>
-            <input type="date" id="appointmentDate" required><br>
-            <select id="serviceType" required>
+        <form id="appointmentForm" autocomplete="off">
+            <input type="text" id="userName" placeholder="Enter your name" required autocomplete="off"><br>
+            <input type="email" id="userEmail" placeholder="Enter your email" required autocomplete="off"><br>
+            <input type="date" id="appointmentDate" required autocomplete="off"><br>
+            <select id="serviceType" required autocomplete="off">
                 <option value="">Select Service</option>
                 <option value="Consultation">Consultation</option>
                 <option value="Health Monitoring">Health Monitoring</option>
@@ -35,15 +35,32 @@
                 <option value="Specialist Appointment">Specialist Appointment</option>
                 <option value="Diagnostics">Diagnostics</option>
             </select><br>
-            <textarea id="userMessage" placeholder="Enter any additional details" rows="4"></textarea><br>
+
+            <!-- Doctor Selection -->
+            <div id="doctorSelection" style="display: none;">
+                <h3>Select a Doctor</h3>
+                <div id="doctorOptions" class="doctor-container">
+                    <!-- Doctor options will be dynamically inserted here -->
+                </div>
+            </div>
+
             <button type="submit">Book Appointment</button>
         </form>
         <div id="confirmationMessage" style="display: none;"></div>
     </section>
 
+    <section class="search-appointment">
+        <h3>Search Your Appointment</h3>
+        <form id="searchForm" autocomplete="off">
+            <input type="text" id="appointmentID" placeholder="Enter your Appointment ID" required autocomplete="off">
+            <button type="submit">Search</button>
+        </form>
+    </section>
+    
+
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 HealthLink | All Rights Reserved</p>
+        <p>© 2025 HealthLink | All Rights Reserved</p>
     </footer>
 
     <script src="../js/appointments.js"></script>

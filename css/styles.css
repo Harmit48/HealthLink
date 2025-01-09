@@ -68,6 +68,7 @@ body {
   background: linear-gradient(45deg, #0b1616, #ff5f00);
   color: #fff;
   margin-top: 80px;
+  height: 80vh;
 }
 
 .hero h1 {

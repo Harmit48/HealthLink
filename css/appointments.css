@@ -7,102 +7,273 @@
 }
 
 body {
-    background-color: #f4f4f4;
-    color: #333;
+    height: 85vh;
+    background: linear-gradient(to bottom, #141414, #e65100);
+    color: #fff;
     font-size: 16px;
     line-height: 1.6;
     scroll-behavior: smooth;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
 /* Navbar Styles */
 .navbar {
-    background-color: #0b1616;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #1e1e1e;
     padding: 10px 20px;
     position: fixed;
-    top: 0;
     width: 100%;
-    z-index: 100;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .navbar .logo {
     color: #ff5f00;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
-.navbar .nav-links {
-    list-style: none;
+.nav-links {
     display: flex;
+    gap: 15px;
 }
 
-.navbar .nav-links li {
-    margin: 0 15px;
+.nav-links li {
+    margin: 0;
 }
 
-.navbar .nav-links li a {
-    text-decoration: none;
+.nav-links a {
+    padding: 8px 15px;
     color: #fff;
-    font-size: 1rem;
-    transition: color 0.3s;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.navbar .nav-links li a:hover {
-    color: #ff5f00;
+.nav-links a:hover {
+    background-color: #ff5f00;
+    color: #fff;
 }
 
+/* Responsive Navbar */
 .menu-toggle {
     display: none;
-    background: none;
-    border: none;
-    font-size: 1.8rem;
-    color: #ff5f00;
+    font-size: 1.5rem;
     cursor: pointer;
+    color: #fff;
 }
 
-/* Appointment Form */
+.nav-links.active {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: #1e1e1e;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Form Styles */
 .appointment-form {
     max-width: 600px;
-    margin: 100px auto 50px;
+    margin: 140px auto 20px;
     padding: 20px;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    background: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
     text-align: center;
 }
 
 .appointment-form h2 {
+    color: #ff5f00;
     margin-bottom: 20px;
-    color: #0b1616;
 }
 
 .appointment-form input,
 .appointment-form select,
-.appointment-form textarea {
+.appointment-form button {
     width: 100%;
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
     font-size: 1rem;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.appointment-form input:focus,
+.appointment-form select:focus {
+    background-color: #444;
+    border: 1px solid #ff5f00;
 }
 
 .appointment-form button {
     background-color: #ff5f00;
     color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 .appointment-form button:hover {
     background-color: #0b1616;
+}
+
+/* Doctor Selection */
+#doctorSelection {
+    text-align: left;
+    margin-top: 20px;
+}
+
+#doctorSelection h3 {
+    font-size: 1.2rem;
+    color: #ff5f00;
+    margin-bottom: 10px;
+}
+
+.doctor-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.doctor-option {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.doctor-option:hover {
+    background-color: #444;
+}
+
+.doctor-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.doctor-name {
+    flex: 1;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.doctor-select {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Search Appointment Section */
+.search-appointment {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+    text-align: center;
+}
+
+.search-appointment h3 {
+    color: #ff5f00;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.search-appointment input,
+.search-appointment button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.search-appointment input:focus,
+.search-appointment button:focus {
+    background-color: #444;
+    border: 1px solid #ff5f00;
+}
+
+.search-appointment button {
+    background-color: #ff5f00;
+    color: #fff;
+    cursor: pointer;
+}
+
+.search-appointment button:hover {
+    background-color: #0b1616;
+}
+
+/* Error or Success Message */
+#confirmationMessage {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #444;
+    color: #ff5f00;
+    border-radius: 8px;
+    font-size: 1rem;
+    display: none;
+}
+
+#confirmationMessage.success {
+    background-color: #28a745;
+    color: white;
+}
+
+#confirmationMessage.error {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Footer Styles */
@@ -110,8 +281,51 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: #0b1616;
-    color: #fff;
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+footer p {
+    margin: 0;
+    color: #fff;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #3a3d3d;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1000;
+    width: 90%;
+    max-width: 400px;
+    color: #fff;
+}
+
+.popup-content h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.popup-content p {
+    margin: 10px 0;
+}
+
+.close-popup {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.close-popup:hover {
+    background: #0056b3;
 }
